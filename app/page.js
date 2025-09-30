@@ -1,17 +1,19 @@
+import Button from '../components/ui/Button/Button';
+import StarIcon from '../components/StarIcon/StarIcon';
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-md">
-        <h1 className="text-3xl font-bold text-blue-600 mb-4">
-          Tailwind CSS работает!
-        </h1>
-        <p className="text-gray-600">
-          Если вы видите этот стилизованный текст, значит Tailwind CSS настроен правильно.
-        </p>
-        <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">
-          Тестовая кнопка
-        </button>
-      </div>
-    </div>
+    <>
+      <header className='w-[100%] h-[103px] bg-[#1D5B43] rounded-t-[60px] flex flex-col items-center justify-center'>
+        <span className='text-[24px] text-[#FFFFFF] font-montserrat font-semibold'>Успейте открыть пробную неделю</span>
+        <div className='w-[167px] h-[52px] border border-black'>
+          <StarIcon />
+        </div>
+      </header>
+      <main className='w-[100%] h-[1518px] bg-[#232829] rounded-b-[60px] flex justify-center'>
+        
+        {/* <Button title='Купить' className='w-[352px] h-[66px] rounded-[20px] bg-[#FDB056] text-[20px] font-montserrat font-bold' /> */}
+      </main>
+    </>
   )
 }
