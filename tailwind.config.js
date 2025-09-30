@@ -5,12 +5,15 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {
-    extend: {
-      fontFamily: {
-        montserrat: ['var(--font-montserrat)', 'sans-serif'],
+    theme: {
+      extend: {
+        fontFamily: {
+          raleway: ['var(--font-raleway)'],
+          montserrat: ['var(--font-montserrat)'],
+          geist: ['var(--font-geist-sans)'],
+          'geist-mono': ['var(--font-geist-mono)'],
+        },
       },
     },
-  },
   plugins: [],
 }
