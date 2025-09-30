@@ -1,0 +1,30 @@
+.label {
+    cursor: pointer;
+}
+.checkbox{
+    display: none;
+} 
+.fake{
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    background: #232829;
+    color: #FDB056;
+    font-size: 28px;
+    border: 1px solid #606566;
+    justify-content: center;
+}
+.fake::before{    
+    content: "";
+    width: 20px;   
+    height: 10px;
+    border-left: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg) translate(-6px, 4px);
+    opacity: 0;
+    transition: .2s;
+}
+
+.checkbox:checked + .fake::before{
+    opacity: 1;
+}

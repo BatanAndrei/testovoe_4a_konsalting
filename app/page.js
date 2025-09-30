@@ -4,6 +4,7 @@ import Image from 'next/image';
 import imgDesck from '../public/imgDesck.png';
 import TariffCardDesck from '../components/ui/TariffCardDesck/TariffCardDesck';
 import AlertIcon from '../components/AlertIcon/AlertIcon';
+import Checkbox from '../components/ui/Checkbox/Checkbox';
 
 export default function Home() {
 
@@ -36,6 +37,12 @@ export default function Home() {
                 <AlertIcon />
                 <span className='ml-[8px] text-[#FFFFFF] text-[16px] font-montserrat font-regular'>Следуя плану на 3 месяца и более, люди получают в 2 раза лучший результат, чем за 1 месяц</span>
               </div>
+              <div className='flex items-center mt-[30px] w-[649px] h-[36px]'>
+                <Checkbox className='w-[32px] h-[32px] cursor-pointer'/>
+                <div className='ml-[15px] text-[#CDCDCD] text-[16px] font-montserrat font-regular leading-none'>Я согласен с <span className="underline cursor-pointer">офертой рекуррентных платежей</span> и <span className="underline cursor-pointer">Политикой конфиденциальности</span>
+                </div>
+              </div>
+              <Button title='Купить' className='mt-[16px] cursor-pointer w-[352px] h-[66px] rounded-[20px] bg-[#FDB056] text-[20px] font-montserrat font-bold' />
              </div>
           </div>
           <div className='mt-[66px] w-[1216px] h-[231px] border border-red-500'>
