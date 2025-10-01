@@ -17,10 +17,10 @@ const TariffHit = ({ title, price, percent, description, originalPrice, shortDes
           {originalPrice}
         </div>
       </div>
-      <div className="hidden md:block pb-[20px] flex items-center w-[328px] h-[190px] text-[16px] text-[#FFFFFF] ont-montserrat font-regular max-[375px]:w-[120px] max-[320px]:w-[120px] max-[375px]:h-[56px] max-[320px]:h-[56px] max-[375px]:text-[14px] max-[320px]:text-[14px]">
+      <div className="hidden md:block pb-[20px] flex items-center w-[328px] h-[190px] text-[16px] text-[#FFFFFF] font-montserrat font-regular max-[375px]:w-[120px] max-[320px]:w-[120px] max-[375px]:h-[56px] max-[320px]:h-[56px] max-[375px]:text-[14px] max-[320px]:text-[14px]">
         {description}
       </div>
-      <div className="block md:hidden pb-[20px] flex items-center w-[328px] h-[190px] text-[16px] text-[#FFFFFF] ont-montserrat font-regular max-[375px]:w-[120px] max-[320px]:w-[120px] max-[375px]:h-[56px] max-[320px]:h-[56px] max-[375px]:text-[14px] max-[320px]:text-[14px]">
+      <div className="block md:hidden pb-[20px] flex items-center w-[328px] h-[190px] text-[16px] text-[#FFFFFF] font-montserrat font-regular max-[375px]:w-[120px] max-[320px]:w-[120px] max-[375px]:h-[56px] max-[320px]:h-[56px] max-[375px]:text-[14px] max-[320px]:text-[14px]">
         {shortDescription}
       </div>
       <div className="mt-[10px] text-[#FDB056] text-[22px] font-montserrat font-medium">
