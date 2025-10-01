@@ -27,7 +27,7 @@ export default function Home() {
           </div>
           <div className='mt-[110px] w-[1216px] h-[867px] flex items-center justify-between'>
              <Image src={imgDesck} alt="Фото атлета" width={380} height={767} />
-             <div className='w-[748px] h-[867px] border border-green-500'>
+             <div className='w-[748px] h-[867px]'>
               <TariffCardDesck title='Навсегда' price='5990 ₽' percent='-70%' description='Для тех, кто хочет всегда быть в форме и поддерживать здоровье' originalPrice='18 990 ₽' hit />
               <div className='flex justify-between mt-[14px] w-[100%] h-[335px]'>
                 <TariffCardDesck percent='-50%' title='3 месяца' price='1990 ₽' originalPrice='3990 ₽' description={'Привести тело\nв порядок'}/>
@@ -44,10 +44,14 @@ export default function Home() {
                 </div>
               </div>
               <Button title='Купить' className='mt-[16px] cursor-pointer w-[352px] h-[66px] rounded-[20px] bg-[#FDB056] text-[20px] font-montserrat font-bold' />
+              <div className='mt-[14px] text-[#9B9B9B] text-[14px] w-[748px] h-[68px] font-montserrat font-regular'>Нажимая кнопку «Купить», Пользователь соглашается на разовое списание денежных средств для получения пожизненного доступа к приложению. Пользователь соглашается, что данные кредитной/дебетовой карты будут сохранены для осуществления покупок дополнительных услуг сервиса в случае желания пользователя.</div>
              </div>
           </div>
-          <div className='mt-[66px] w-[1216px] h-[231px] border border-red-500'>
-           
+          <div className='p-[20px] mt-[66px] w-[1216px] h-[231px] border border-[#484D4E] rounded-[30px]'>
+           <div className='flex items-center justify-center w-[461px] h-[68px] bg-[#2D3233] rounded-[30px] border border-[#81FE95]'>
+            <span className='text-[#81FE95] text-[28px] font-montserrat font-medium'>гарантия возврата 30 дней</span>
+           </div>
+           <div className='mt-[30px] w-[1176px] h-[93px] text-[24px] text-[#DCDCDC] font-montserrat font-regular'>Мы уверены, что наш план сработает для тебя и ты увидишь видимые результаты уже через 4 недели! Мы даже готовы полностью вернуть твои деньги в течение 30 дней с момента покупки, если ты не получишь видимых результатов.</div>
           </div>
         </div>
       </main>
