@@ -3,20 +3,15 @@
 //red = #FF4E4E;
 //yellow = #FFBB00;
 
-const StarIcon = ({ 
-  size = 12, 
-  color = "white", 
-  className = "",
-  ...props 
-}) => {
+const StarIcon = ({ size = 12, color = 'white', className = '', ...props }) => {
   const getColorValue = (color) => {
     switch (color) {
-      case "white":
-        return "#FFFFFF";
-      case "red":
-        return "#FF4E4E";
-      case "yellow":
-        return "#FFBB00";
+      case 'white':
+        return '#FFFFFF';
+      case 'red':
+        return '#FF4E4E';
+      case 'yellow':
+        return '#FFBB00';
       default:
         return color;
     }
@@ -25,7 +20,7 @@ const StarIcon = ({
   const fillColor = getColorValue(color);
 
   return (
-    <svg 
+    <svg
       width={size}
       height={size}
       viewBox="0 0 12 12"
