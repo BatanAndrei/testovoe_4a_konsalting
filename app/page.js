@@ -2,7 +2,7 @@ import Button from '../components/ui/Button/Button';
 import StarIcon from '../components/StarIcon/StarIcon';
 import Image from 'next/image';
 import imgDesck from '../public/imgDesck.png';
-import TariffCardDesck from '../components/ui/TariffCardDesck/TariffCardDesck';
+import TariffCard from '../components/ui/TariffCard/TariffCard';
 import AlertIcon from '../components/AlertIcon/AlertIcon';
 import Checkbox from '../components/ui/Checkbox/Checkbox';
 import Link from 'next/link';
@@ -10,51 +10,60 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
-      <header className="w-[100%] h-[103px] bg-[#1D5B43] rounded-t-[60px] flex flex-col items-center justify-center">
-        <span className="text-[24px] text-[#FFFFFF] font-montserrat font-semibold">
+      <header className="w-[100%] h-[103px] bg-[#1D5B43] rounded-t-[60px] flex flex-col items-center justify-center max-[375px]:rounded-t-none max-[375px]:h-[85px] max-[320px]:rounded-t-none max-[320px]:h-[74px] max-[375px]:w-[375px] max-[320px]:w-[320px]">
+        <span className="text-[24px] text-[#FFFFFF] font-montserrat font-semibold max-[375px]:text-[18px] max-[320px]:text-[14px]">
           Успейте открыть пробную неделю
         </span>
-        <div className="w-[167px] h-[52px] flex items-center justify-between">
+        <div className="w-[167px] h-[52px] flex items-center justify-between max-[375px]:w-[136px] max-[375px]:h-[42px] max-[320px]:w-[126px] max-[320px]:h-[36px]">
           <StarIcon />
-          <span className="font-raleway font-bold text-[40px] text-[#FFFFFF]">
+          <span className="font-raleway font-bold text-[40px] text-[#FFFFFF] max-[375px]:text-[32px] max-[320px]:text-[28px]">
             02 : 00
           </span>
           <StarIcon />
         </div>
       </header>
-      <main className="w-[100%] h-[1518px] bg-[#232829] rounded-b-[60px] flex justify-center">
-        <div className="w-[1216px] h-[1518px]">
-          <div className="mt-[50px] font-montserrat font-bold text-[40px]">
+      <main className="w-[100%] h-[1518px] bg-[#232829] rounded-b-[60px] flex justify-center max-[375px]:rounded-b-none max-[320px]:rounded-b-none max-[375px]:w-[375px] max-[320px]:w-[320px] max-[375px]:p-[0_16px_0_16px] max-[320px]:p-[0_16px_0_16px]">
+        <div className="w-[1216px] h-[1518px] max-[375px]:w-[359px] max-[320px]:w-[304px]">
+          <div className="mt-[50px] font-montserrat font-bold text-[40px] max-[375px]:text-[24px] max-[320px]:text-[22px] max-[375px]:mt-[20px] max-[320px]:mt-[20px] max-[375px]:mr-[60px] max-[320px]:mr-[31px]">
             <span className="text-[white]">Выбери подходящий для себя</span>
             <span className="text-[#FDB056]"> тариф</span>
           </div>
-          <div className="mt-[110px] w-[1216px] h-[867px] flex items-center justify-between">
-            <Image src={imgDesck} alt="Фото атлета" width={380} height={767} />
-            <div className="w-[748px] h-[867px]">
-              <TariffCardDesck
+          <div className="mt-[110px] w-[1216px] h-[867px] flex items-center justify-between max-[375px]:mt-[20px] max-[320px]:mt-[24px] max-[375px]:flex max-[320px]:flex max-[375px]:flex-col max-[320px]:flex-col max-[375px]:w-[359px] max-[320px]:w-[304px]">
+            <Image
+              src={imgDesck}
+              alt="Фото атлета"
+              width={380}
+              height={767}
+              className="max-w-full h-auto
+            max-[375px]:w-[124px] max-[375px]:h-[250px]
+            max-[320px]:w-[99px] max-[320px]:h-[200px]"
+            />
+            <div className="w-[748px] h-[867px] max-[375px]:w-[359px] max-[320px]:w-[304px]">
+              <TariffCard
                 title="Навсегда"
                 price="5990 ₽"
                 percent="-70%"
                 description="Для тех, кто хочет всегда быть в форме и поддерживать здоровье"
+                shortDescription="Всегда быть в форме"
                 originalPrice="18 990 ₽"
                 hit
               />
-              <div className="flex justify-between mt-[14px] w-[100%] h-[335px]">
-                <TariffCardDesck
+              <div className="flex justify-between mt-[14px] w-[100%] h-[335px] max-[375px]:flex-col max-[320px]:flex-col max-[375px]:mt-[8px] max-[320px]:mt-[8px]">
+                <TariffCard
                   percent="-50%"
                   title="3 месяца"
                   price="1990 ₽"
                   originalPrice="3990 ₽"
                   description={'Привести тело\nв порядок'}
                 />
-                <TariffCardDesck
+                <TariffCard
                   percent="-40%"
                   title="1 месяц"
                   price="990 ₽"
                   originalPrice="1690 ₽"
                   description={'Чтобы получить первые результаты'}
                 />
-                <TariffCardDesck
+                <TariffCard
                   percent="-30%"
                   title="1 неделя"
                   price="690 ₽"

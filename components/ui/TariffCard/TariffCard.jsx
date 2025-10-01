@@ -1,13 +1,14 @@
 import TariffHit from './TariffHit';
 import TariffRegular from './TariffRegular';
 
-const TariffCardDesck = ({
+const TariffCard = ({
   hit = false,
   title,
   price,
   percent,
   description,
   originalPrice,
+  shortDescription,
 }) => {
   switch (hit) {
     case true:
@@ -18,6 +19,7 @@ const TariffCardDesck = ({
           percent={percent}
           description={description}
           originalPrice={originalPrice}
+          shortDescription={shortDescription}
         />
       );
     case false:
@@ -43,4 +45,4 @@ const TariffCardDesck = ({
   }
 };
 
-export default TariffCardDesck;
+export default TariffCard;
