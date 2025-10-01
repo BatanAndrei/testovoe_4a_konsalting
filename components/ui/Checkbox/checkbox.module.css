@@ -1,9 +1,11 @@
 .label {
   cursor: pointer;
 }
+
 .checkbox {
   display: none;
 }
+
 .fake {
   display: inline-flex;
   width: 32px;
@@ -14,6 +16,7 @@
   border: 1px solid #606566;
   justify-content: center;
 }
+
 .fake::before {
   content: '';
   width: 20px;

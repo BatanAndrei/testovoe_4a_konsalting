@@ -70,7 +70,7 @@ export default function Home() {
                 </span>
               </div>
               <div className="flex items-center mt-[30px] w-[649px] h-[36px]">
-                <Checkbox className="w-[32px] h-[32px] cursor-pointer" />
+                <Checkbox />
                 <div className="m-[5px_0_0_15px] text-[#CDCDCD] text-[16px] font-montserrat font-regular leading-none">
                   Я согласен с{' '}
                   <Link href="#">
