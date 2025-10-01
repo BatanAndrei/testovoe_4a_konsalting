@@ -5,6 +5,7 @@ import imgDesck from '../public/imgDesck.png';
 import TariffCardDesck from '../components/ui/TariffCardDesck/TariffCardDesck';
 import AlertIcon from '../components/AlertIcon/AlertIcon';
 import Checkbox from '../components/ui/Checkbox/Checkbox';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -39,7 +40,7 @@ export default function Home() {
               </div>
               <div className='flex items-center mt-[30px] w-[649px] h-[36px]'>
                 <Checkbox className='w-[32px] h-[32px] cursor-pointer'/>
-                <div className='ml-[15px] text-[#CDCDCD] text-[16px] font-montserrat font-regular leading-none'>Я согласен с <span className="underline cursor-pointer">офертой рекуррентных платежей</span> и <span className="underline cursor-pointer">Политикой конфиденциальности</span>
+                <div className='ml-[15px] text-[#CDCDCD] text-[16px] font-montserrat font-regular leading-none'>Я согласен с <Link href="#"><span className="underline cursor-pointer">офертой рекуррентных платежей</span></Link> и <Link href="#"><span className="underline cursor-pointer">Политикой конфиденциальности</span></Link>
                 </div>
               </div>
               <Button title='Купить' className='mt-[16px] cursor-pointer w-[352px] h-[66px] rounded-[20px] bg-[#FDB056] text-[20px] font-montserrat font-bold' />
@@ -49,7 +50,6 @@ export default function Home() {
            
           </div>
         </div>
-        {/* <Button title='Купить' className='w-[352px] h-[66px] rounded-[20px] bg-[#FDB056] text-[20px] font-montserrat font-bold' /> */}
       </main>
     </>
   )
