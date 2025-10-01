@@ -71,7 +71,7 @@ export default function Home() {
               </div>
               <div className="flex items-center mt-[30px] w-[649px] h-[36px]">
                 <Checkbox className="w-[32px] h-[32px] cursor-pointer" />
-                <div className="ml-[15px] text-[#CDCDCD] text-[16px] font-montserrat font-regular leading-none">
+                <div className="m-[5px_0_0_15px] text-[#CDCDCD] text-[16px] font-montserrat font-regular leading-none">
                   Я согласен с{' '}
                   <Link href="#">
                     <span className="underline cursor-pointer">
