@@ -1,4 +1,11 @@
-const TariffHit = ({ title, price, percent, description, originalPrice, shortDescription }) => {
+const TariffHit = ({
+  title,
+  price,
+  percent,
+  description,
+  originalPrice,
+  shortDescription,
+}) => {
   return (
     <div className="bg-[#313637] p-[0_20px_0_50px] w-[100%] h-[190px] border-2 border-[#484D4E] rounded-[40px] flex justify-between max-[375px]:h-[131px] max-[320px]:h-[118px] max-[375px]:p-[0_22px_0_30px]  max-[320px]:p-[0_11px_0_20px] max-[375px]:rounded-[20px] max-[320px]:rounded-[20px]">
       <div className="w-[66px] h-[39px] rounded-b-[8px] bg-[#FD5656] flex items-center justify-center max-[375px]:hidden max-[320px]:hidden">
@@ -20,10 +27,15 @@ const TariffHit = ({ title, price, percent, description, originalPrice, shortDes
       <div className="hidden md:block pl-[30px] mt-[66px] flex items-center w-[328px] h-[62px] text-[16px] text-[#FFFFFF] font-montserrat font-regular">
         {description}
       </div>
-      <div className="block md:hidden pb-[20px] flex items-center text-[16px] text-[#FFFFFF] font-montserrat font-regular max-[375px]:w-[120px] max-[320px]:w-[120px] max-[375px]:h-[56px] max-[320px]:h-[56px] max-[375px]:text-[14px] max-[320px]:text-[14px] max-[375px]:mt-[47px] max-[320px]:mt-[41px] max-[375px]:pl-[50px] max-[320px]:pl-[30px]">
+      <div className="block md:hidden pb-[20px] flex items-center text-[16px] text-[#FFFFFF] font-montserrat font-regular max-[375px]:w-[120px] max-[320px]:w-[120px] max-[375px]:h-[56px] max-[320px]:h-[56px] max-[375px]:text-[14px] max-[320px]:text-[14px] max-[375px]:pl-[40px] max-[320px]:pl-[20px] max-[375px]:flex max-[320px]:flex max-[375px]:flex-col max-[320px]:flex-col">
+        <div className="block md:hidden w-[66px] h-[39px] rounded-b-[8px] bg-[#FD5656] flex items-center justify-center max-[375px]:w-[48px] max-[320px]:w-[42px] max-[375px]:h-[27px] max-[320px]:h-[23px] max-[375px]:m-[0_0_20px_30px] max-[320px]:m-[0_0_20px_40px]">
+          <span className="text-[22px] text-[#FFFFFF] font-gilroy max-[375px]:text-[16px] max-[320px]:text-[13px]">
+            {percent}
+          </span>
+        </div>
         {shortDescription}
       </div>
-      <div className="mt-[10px] text-[#FDB056] text-[22px] font-montserrat font-medium">
+      <div className="mt-[10px] text-[#FDB056] text-[22px] font-montserrat font-medium max-[375px]:mt-[0px] max-[320px]:mt-[0px] max-[375px]:text-[16px] max-[320px]:text-[13px]">
         хит!
       </div>
     </div>
