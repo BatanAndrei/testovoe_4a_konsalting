@@ -51,7 +51,7 @@ export default function Home() {
            <div className='flex items-center justify-center w-[461px] h-[68px] bg-[#2D3233] rounded-[30px] border border-[#81FE95]'>
             <span className='text-[#81FE95] text-[28px] font-montserrat font-medium'>гарантия возврата 30 дней</span>
            </div>
-           <div className='mt-[30px] w-[1176px] h-[93px] text-[24px] text-[#DCDCDC] font-montserrat font-regular'>Мы уверены, что наш план сработает для тебя и ты увидишь видимые результаты уже через 4 недели! Мы даже готовы полностью вернуть твои деньги в течение 30 дней с момента покупки, если ты не получишь видимых результатов.</div>
+           <div className='mt-[30px] w-[1176px] h-[93px] text-[24px] text-[#DCDCDC] font-montserrat font-regular leading-tight'>Мы уверены, что наш план сработает для тебя и ты увидишь видимые результаты уже через 4 недели! Мы даже готовы полностью вернуть твои деньги в течение 30 дней с момента покупки, если ты не получишь видимых результатов.</div>
           </div>
         </div>
       </main>
