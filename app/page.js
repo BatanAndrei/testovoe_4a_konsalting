@@ -73,14 +73,14 @@ export default function Home() {
               </div>
               <div className="flex p-[12px_20px_15px_20px] bg-[#313637] mt-[20px] w-[499px] h-[78px] rounded-[20px] max-[375px]:mt-[85px] max-[320px]:mt-[45px] max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:h-[76px] max-[320px]:h-[76px] max-[375px]:p-[8px_40px_18px_15px] max-[320px]:p-[8px_20px_18px_15px]">
                 <AlertIcon />
-                <span className="mt-[2px] ml-[8px] text-[#FFFFFF] text-[16px] font-montserrat font-regular max-[375px]:text-[12px] max-[320px]:text-[12px] max-[375px]:mt-[5px] max-[320px]:mt-[5px]">
+                <span className="m-[2px_0_0_8px] text-[#FFFFFF] text-[16px] font-montserrat font-regular max-[375px]:text-[12px] max-[320px]:text-[12px] max-[375px]:mt-[5px] max-[320px]:mt-[5px]">
                   Следуя плану на 3 месяца и более, люди получают в 2 раза
                   лучший результат, чем за 1 месяц
                 </span>
               </div>
-              <div className="flex items-center mt-[30px] w-[649px] h-[36px]">
+              <div className="flex items-center mt-[30px] w-[649px] h-[36px] max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:mt-[10px] max-[320px]:mt-[10px]">
                 <Checkbox />
-                <div className="m-[5px_0_0_15px] text-[#CDCDCD] text-[16px] font-montserrat font-regular leading-none">
+                <div className="m-[5px_0_0_15px] text-[#CDCDCD] text-[16px] font-montserrat font-regular leading-none max-[375px]:text-[12px] max-[320px]:text-[12px]">
                   Я согласен с{' '}
                   <Link href="#">
                     <span className="underline cursor-pointer">
@@ -97,9 +97,9 @@ export default function Home() {
               </div>
               <Button
                 title="Купить"
-                className="mt-[16px] cursor-pointer w-[352px] h-[66px] rounded-[20px] bg-[#FDB056] text-[20px] font-montserrat font-bold"
+                className="mt-[16px] cursor-pointer w-[352px] h-[66px] rounded-[20px] bg-[#FDB056] text-[20px] font-montserrat font-bold max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:h-[63px] max-[320px]:h-[55px]"
               />
-              <div className="mt-[14px] text-[#9B9B9B] text-[14px] w-[748px] h-[68px] font-montserrat font-regular">
+              <div className="mt-[14px] text-[#9B9B9B] text-[14px] w-[748px] h-[68px] font-montserrat font-regular max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:h-[72px] max-[320px]:h-[84px] max-[375px]:text-[10px] max-[320px]:text-[10px]">
                 Нажимая кнопку «Купить», Пользователь соглашается на разовое
                 списание денежных средств для получения пожизненного доступа к
                 приложению. Пользователь соглашается, что данные
@@ -109,13 +109,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="p-[20px] mt-[66px] w-[1216px] h-[231px] border border-[#484D4E] rounded-[30px]">
-            <div className="flex items-center justify-center w-[461px] h-[68px] bg-[#2D3233] rounded-[30px] border border-[#81FE95]">
-              <span className="text-[#81FE95] text-[28px] font-montserrat font-medium">
+          <div className="p-[20px] mt-[66px] w-[1216px] h-[231px] border border-[#484D4E] rounded-[30px] max-[375px]:mt-[250px] max-[320px]:mt-[150px] max-[375px]:w-[100%] max-[320px]:w-[100%]  max-[375px]:p-[10px] max-[320px]:p-[10px] max-[375px]:h-[166px] max-[320px]:h-[185px]">
+            <div className="flex items-center justify-center w-[461px] h-[68px] bg-[#2D3233] rounded-[30px] border border-[#81FE95]  max-[375px]:w-[294px] max-[320px]:w-[100%] max-[375px]:h-[44px] max-[320px]:h-[41px]">
+              <span className="text-[#81FE95] text-[28px] font-montserrat font-medium max-[375px]:text-[18px] max-[320px]:text-[16px]">
                 гарантия возврата 30 дней
               </span>
             </div>
-            <div className="mt-[30px] w-[1176px] h-[93px] text-[24px] text-[#DCDCDC] font-montserrat font-regular leading-tight">
+            <div className="mt-[30px] w-[1176px] h-[93px] text-[24px] text-[#DCDCDC] font-montserrat font-regular leading-tight max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:mt-[10px] max-[320px]:mt-[10px] max-[375px]:text-[14px] max-[320px]:tex-[13px]">
               Мы уверены, что наш план сработает для тебя и ты увидишь видимые
               результаты уже через 4 недели! Мы даже готовы полностью вернуть
               твои деньги в течение 30 дней с момента покупки, если ты не
