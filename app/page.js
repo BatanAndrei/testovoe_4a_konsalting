@@ -71,9 +71,9 @@ export default function Home() {
                   description={'Чтобы просто начать'}
                 />
               </div>
-              <div className="flex p-[10px_20px_18px_20px] bg-[#313637] mt-[20px] w-[499px] h-[78px] rounded-[20px]">
+              <div className="flex p-[12px_20px_15px_20px] bg-[#313637] mt-[20px] w-[499px] h-[78px] rounded-[20px] max-[375px]:mt-[85px] max-[320px]:mt-[45px] max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:h-[76px] max-[320px]:h-[76px] max-[375px]:p-[8px_40px_18px_15px] max-[320px]:p-[8px_20px_18px_15px]">
                 <AlertIcon />
-                <span className="ml-[8px] text-[#FFFFFF] text-[16px] font-montserrat font-regular">
+                <span className="mt-[2px] ml-[8px] text-[#FFFFFF] text-[16px] font-montserrat font-regular max-[375px]:text-[12px] max-[320px]:text-[12px] max-[375px]:mt-[5px] max-[320px]:mt-[5px]">
                   Следуя плану на 3 месяца и более, люди получают в 2 раза
                   лучший результат, чем за 1 месяц
                 </span>
