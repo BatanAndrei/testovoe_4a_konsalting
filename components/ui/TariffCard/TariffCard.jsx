@@ -9,6 +9,8 @@ const TariffCard = ({
   description,
   originalPrice,
   shortDescription,
+  onClick,
+  isSelected,
 }) => {
   switch (hit) {
     case true:
@@ -20,6 +22,8 @@ const TariffCard = ({
           description={description}
           originalPrice={originalPrice}
           shortDescription={shortDescription}
+          onClick={onClick}
+          isSelected={isSelected}
         />
       );
     case false:
@@ -30,6 +34,8 @@ const TariffCard = ({
           percent={percent}
           description={description}
           originalPrice={originalPrice}
+          onClick={onClick}
+          isSelected={isSelected}
         />
       );
     default:
@@ -40,6 +46,8 @@ const TariffCard = ({
           percent={percent}
           description={description}
           originalPrice={originalPrice}
+          onClick={onClick}
+          isSelected={isSelected}
         />
       );
   }

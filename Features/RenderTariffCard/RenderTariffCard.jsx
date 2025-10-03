@@ -1,6 +1,10 @@
 import TariffCard from '../../components/ui/TariffCard/TariffCard';
 
-const RenderTariffCard = ({ dataAllTariff }) => {
+const RenderTariffCard = ({
+  dataAllTariff,
+  handleTariffClick,
+  selectedTarriff,
+}) => {
   return (
     <>
       {dataAllTariff?.map((item, index) => {
@@ -20,6 +24,8 @@ const RenderTariffCard = ({ dataAllTariff }) => {
             description={item.text}
             originalPrice={`${item.full_price} ₽`}
             hit={item.is_best}
+            onClick={() => handleTariffClick(index)}
+            isSelected={selectedTarriff === index}
           />
         );
       })}

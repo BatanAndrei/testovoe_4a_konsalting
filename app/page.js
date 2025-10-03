@@ -8,12 +8,13 @@ import AlertIcon from '../components/Icons/AlertIcon/AlertIcon';
 import Checkbox from '../components/ui/Checkbox/Checkbox';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { RequestGetAllTariff } from '../redux/thunks/getAllTariffCard';
 import RenderTariffCard from '../features/RenderTariffCard/RenderTariffCard';
 import Timer from '../features/Timer/Timer';
 
 export default function Home() {
+  const [selectedTarriff, setSelectedTariff] = useState(null);
   const dataAllTariff = useSelector(
     (state) => state.extraAllTariff.dataAllTariff
   );
@@ -22,6 +23,10 @@ export default function Home() {
   useEffect(() => {
     dispatch(RequestGetAllTariff());
   }, [dispatch]);
+
+  const handleTariffClick = (index) => {
+    setSelectedTariff(index);
+  };
 
   return (
     <>
@@ -53,7 +58,11 @@ export default function Home() {
             />
             <div className="w-[754px] h-[867px] max-[375px]:w-[359px] max-[320px]:w-[304px]">
               <div className="flex flex-wrap gap-4 mt-[14px] w-[100%] h-[545px] max-[375px]:flex-nowrap max-[320px]:flex-nowrap max-[375px]:flex-col max-[320px]:flex-col max-[375px]:gap-2 max-[320px]:gap-2 max-[375px]:h-[545px] max-[320px]:h-[495px]">
-                <RenderTariffCard dataAllTariff={dataAllTariff} />
+                <RenderTariffCard
+                  handleTariffClick={handleTariffClick}
+                  selectedTarriff={selectedTarriff}
+                  dataAllTariff={dataAllTariff}
+                />
               </div>
               <div className="flex p-[12px_20px_15px_20px] bg-[#313637] mt-[20px] w-[499px] h-[78px] rounded-[20px] max-[375px]:mt-[10px] max-[320px]:mt-[10px] max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:h-[76px] max-[320px]:h-[76px] max-[375px]:p-[8px_40px_18px_15px] max-[320px]:p-[8px_20px_18px_15px]">
                 <AlertIcon />
