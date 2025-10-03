@@ -4,12 +4,9 @@ export const RequestGetAllTariff = createAsyncThunk(
   'tariffCards/RequestGetAllTariff',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await fetch(
-        `/api/tariffs`,
-        {
-          method: 'GET',
-        }
-      );
+      const response = await fetch(`/api/tariffs`, {
+        method: 'GET',
+      });
 
       if (!response.ok) {
         throw new Error('Ошибка при получении тарифов');

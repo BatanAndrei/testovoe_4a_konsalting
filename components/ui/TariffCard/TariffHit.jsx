@@ -1,19 +1,13 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-const TariffHit = ({
-  title,
-  price,
-  percent,
-  description,
-  originalPrice,
-}) => {
+const TariffHit = ({ title, price, percent, description, originalPrice }) => {
   const [shortDescription, setShortDescription] = useState();
 
   useEffect(() => {
     const shortText = description.replace(
-      'Для тех, кто хочет всегда быть в форме и поддерживать здоровье', 
+      'Для тех, кто хочет всегда быть в форме и поддерживать здоровье',
       'Всегда быть в форме'
     );
     setShortDescription(shortText);

@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 export async function GET() {
   try {
     const response = await fetch('https://t-core.fit-hub.pro/Test/GetTariffs');
-    
+
     if (!response.ok) {
       throw new Error('Failed to fetch tariffs');
     }
