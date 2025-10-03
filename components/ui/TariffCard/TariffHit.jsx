@@ -1,11 +1,22 @@
+import { useEffect, useState } from "react";
+
 const TariffHit = ({
   title,
   price,
   percent,
   description,
   originalPrice,
-  shortDescription,
 }) => {
+  const [shortDescription, setShortDescription] = useState();
+
+  useEffect(() => {
+    const shortText = description.replace(
+      'Для тех, кто хочет всегда быть в форме и поддерживать здоровье', 
+      'Всегда быть в форме'
+    );
+    setShortDescription(shortText);
+  }, [description]);
+
   return (
     <div className="bg-[#313637] p-[0_20px_0_50px] w-[100%] h-[190px] border-2 border-[#484D4E] rounded-[40px] flex justify-between max-[375px]:h-[131px] max-[320px]:h-[118px] max-[375px]:p-[0_11px_0_30px]  max-[320px]:p-[0_11px_0_21px] max-[375px]:rounded-[20px] max-[320px]:rounded-[20px]">
       <div className="w-[66px] h-[39px] rounded-b-[8px] bg-[#FD5656] flex items-center justify-center max-[375px]:hidden max-[320px]:hidden">

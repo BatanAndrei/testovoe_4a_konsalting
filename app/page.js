@@ -53,37 +53,16 @@ export default function Home() {
             max-[320px]:w-[99px] max-[320px]:h-[200px]"
             />
             <div className="w-[754px] h-[867px] max-[375px]:w-[359px] max-[320px]:w-[304px]">
-              <div className="flex flex-wrap gap-4 mt-[14px] w-[100%] h-[545px] max-[375px]:flex-nowrap max-[320px]:flex-nowrap max-[375px]:flex-col max-[320px]:flex-col max-[375px]:gap-2 max-[320px]:gap-2 max-[375px]:h-[545px] max-[320px]:h-[495px]">
-                <TariffCard
-                  title="Навсегда"
-                  price="5990 ₽"
+              <div className="flex flex-wrap-reverse gap-4 mt-[14px] w-[100%] h-[545px] max-[375px]:flex-nowrap max-[320px]:flex-nowrap max-[375px]:flex-col-reverse max-[320px]:flex-col-reverse max-[375px]:gap-2 max-[320px]:gap-2 max-[375px]:h-[545px] max-[320px]:h-[495px]">
+                {dataAllTariff.map((item, index) => (<TariffCard
+                  key={index}
+                  title={item.period}
+                  price={`${item.price} ₽`}
                   percent="-70%"
-                  description="Для тех, кто хочет всегда быть в форме и поддерживать здоровье"
-                  shortDescription="Всегда быть в форме"
-                  originalPrice="18 990 ₽"
-                  hit
-                />
-                <TariffCard
-                  percent="-50%"
-                  title="3 месяца"
-                  price="1990 ₽"
-                  originalPrice="3990 ₽"
-                  description={'Привести тело\nв порядок'}
-                />
-                <TariffCard
-                  percent="-40%"
-                  title="1 месяц"
-                  price="990 ₽"
-                  originalPrice="1690 ₽"
-                  description={'Чтобы получить первые результаты'}
-                />
-                <TariffCard
-                  percent="-30%"
-                  title="1 неделя"
-                  price="690 ₽"
-                  originalPrice="990 ₽"
-                  description={'Чтобы просто начать'}
-                />
+                  description={item.text}
+                  originalPrice={`${item.full_price} ₽`}
+                  hit={item.is_best}
+                />))}
               </div>
               <div className="flex p-[12px_20px_15px_20px] bg-[#313637] mt-[20px] w-[499px] h-[78px] rounded-[20px] max-[375px]:mt-[10px] max-[320px]:mt-[10px] max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:h-[76px] max-[320px]:h-[76px] max-[375px]:p-[8px_40px_18px_15px] max-[320px]:p-[8px_20px_18px_15px]">
                 <AlertIcon />
