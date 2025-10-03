@@ -6,7 +6,7 @@ const TariffRegular = ({
   originalPrice,
 }) => {
   return (
-    <div className="bg-[#313637] w-[240px] h-[335px] border-2 border-[#484D4E] rounded-[40px] max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:h-[131px] max-[320px]:h-[118px] max-[375px]:mb-[8px] max-[320px]:mb-[8px] max-[375px]:rounded-[20px] max-[320px]:rounded-[20px] max-[375px]:p-[0_22px_0_30px] max-[320px]:p-[0_11px_0_20px] max-[375px]:flex max-[320px]:flex">
+    <div className="bg-[#313637] w-[240px] h-[335px] border-2 border-[#484D4E] rounded-[40px] max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:h-[131px] max-[320px]:h-[118px] max-[375px]:rounded-[20px] max-[320px]:rounded-[20px] max-[375px]:p-[0_22px_0_30px] max-[320px]:p-[0_11px_0_20px] max-[375px]:flex max-[320px]:flex">
       <div className="ml-[50px] w-[66px] h-[39px] rounded-b-[8px] bg-[#FD5656] flex items-center justify-center max-[375px]:hidden max-[320px]:hidden">
         <span className="text-[22px] text-[#FFFFFF] font-gilroy">
           {percent}

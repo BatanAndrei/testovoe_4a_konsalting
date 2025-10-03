@@ -38,17 +38,17 @@ export default function Home() {
             max-[375px]:w-[124px] max-[375px]:h-[250px]
             max-[320px]:w-[99px] max-[320px]:h-[200px]"
             />
-            <div className="w-[748px] h-[867px] max-[375px]:w-[359px] max-[320px]:w-[304px]">
-              <TariffCard
-                title="Навсегда"
-                price="5990 ₽"
-                percent="-70%"
-                description="Для тех, кто хочет всегда быть в форме и поддерживать здоровье"
-                shortDescription="Всегда быть в форме"
-                originalPrice="18 990 ₽"
-                hit
-              />
-              <div className="flex justify-between mt-[14px] w-[100%] h-[335px] max-[375px]:flex-col max-[320px]:flex-col max-[375px]:mt-[8px] max-[320px]:mt-[8px]">
+            <div className="w-[754px] h-[867px] max-[375px]:w-[359px] max-[320px]:w-[304px]">
+              <div className="flex flex-wrap gap-4 mt-[14px] w-[100%] h-[545px] max-[375px]:flex-nowrap max-[320px]:flex-nowrap max-[375px]:flex-col max-[320px]:flex-col max-[375px]:gap-2 max-[320px]:gap-2 max-[375px]:h-[545px] max-[320px]:h-[495px]">
+                <TariffCard
+                  title="Навсегда"
+                  price="5990 ₽"
+                  percent="-70%"
+                  description="Для тех, кто хочет всегда быть в форме и поддерживать здоровье"
+                  shortDescription="Всегда быть в форме"
+                  originalPrice="18 990 ₽"
+                  hit
+                />
                 <TariffCard
                   percent="-50%"
                   title="3 месяца"
@@ -71,7 +71,7 @@ export default function Home() {
                   description={'Чтобы просто начать'}
                 />
               </div>
-              <div className="flex p-[12px_20px_15px_20px] bg-[#313637] mt-[20px] w-[499px] h-[78px] rounded-[20px] max-[375px]:mt-[85px] max-[320px]:mt-[45px] max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:h-[76px] max-[320px]:h-[76px] max-[375px]:p-[8px_40px_18px_15px] max-[320px]:p-[8px_20px_18px_15px]">
+              <div className="flex p-[12px_20px_15px_20px] bg-[#313637] mt-[20px] w-[499px] h-[78px] rounded-[20px] max-[375px]:mt-[10px] max-[320px]:mt-[10px] max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:h-[76px] max-[320px]:h-[76px] max-[375px]:p-[8px_40px_18px_15px] max-[320px]:p-[8px_20px_18px_15px]">
                 <AlertIcon />
                 <span className="m-[2px_0_0_8px] text-[#FFFFFF] text-[16px] font-montserrat font-regular max-[375px]:text-[12px] max-[320px]:text-[12px] max-[375px]:mt-[5px] max-[320px]:mt-[5px]">
                   Следуя плану на 3 месяца и более, люди получают в 2 раза
@@ -109,7 +109,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="p-[20px] mt-[66px] w-[1216px] h-[231px] border border-[#484D4E] rounded-[30px] max-[375px]:mt-[250px] max-[320px]:mt-[150px] max-[375px]:w-[100%] max-[320px]:w-[100%]  max-[375px]:p-[10px] max-[320px]:p-[10px] max-[375px]:h-[166px] max-[320px]:h-[185px]">
+          <div className="p-[20px] mt-[66px] w-[1216px] h-[231px] border border-[#484D4E] rounded-[30px] max-[375px]:mt-[260px] max-[320px]:mt-[162px] max-[375px]:w-[100%] max-[320px]:w-[100%]  max-[375px]:p-[10px] max-[320px]:p-[10px] max-[375px]:h-[166px] max-[320px]:h-[185px]">
             <div className="flex items-center justify-center w-[461px] h-[68px] bg-[#2D3233] rounded-[30px] border border-[#81FE95]  max-[375px]:w-[294px] max-[320px]:w-[100%] max-[375px]:h-[44px] max-[320px]:h-[41px]">
               <span className="text-[#81FE95] text-[28px] font-montserrat font-medium max-[375px]:text-[18px] max-[320px]:text-[16px]">
                 гарантия возврата 30 дней
