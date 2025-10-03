@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { RequestGetAllTariff } from '../../api/getAllTariffCard';
+import { RequestGetAllTariff } from '../thunks/getAllTariffCard';
 
 const initialState = {
   dataAllTariff: [],

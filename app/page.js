@@ -9,7 +9,7 @@ import Checkbox from '../components/ui/Checkbox/Checkbox';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { RequestGetAllTariff } from '../api/getAllTariffCard';
+import { RequestGetAllTariff } from '../redux/thunks/getAllTariffCard';
 import RenderTariffCard from '../Features/RenderTariffCard/RenderTariffCard';
 
 export default function Home() {
