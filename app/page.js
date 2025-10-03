@@ -58,7 +58,7 @@ export default function Home() {
                   key={index}
                   title={item.period}
                   price={`${item.price} ₽`}
-                  percent="-70%"
+                  percent={`-${Math.round((item.full_price - item.price) / item.full_price * 100)}%`}
                   description={item.text}
                   originalPrice={`${item.full_price} ₽`}
                   hit={item.is_best}
