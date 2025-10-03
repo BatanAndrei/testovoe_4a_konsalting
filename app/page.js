@@ -13,7 +13,9 @@ import { useEffect } from 'react';
 import { RequestGetAllTariff } from '../api/getAllTariffCard';
 
 export default function Home() {
-  const dataAllTariff = useSelector((state) => state.extraAllTariff.dataAllTariff);
+  const dataAllTariff = useSelector(
+    (state) => state.extraAllTariff.dataAllTariff
+  );
   const dispatch = useDispatch();
 
   useEffect(() => {

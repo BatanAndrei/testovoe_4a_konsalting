@@ -10,9 +10,7 @@ const initialState = {
 export const tariffCardSlice = createSlice({
   name: 'tariffCard',
   initialState,
-  reducers: {
-  
-  },
+  reducers: {},
 
   extraReducers: (builder) => {
     builder.addCase(RequestGetAllTariff.pending, (state) => {
