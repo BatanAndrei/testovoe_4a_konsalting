@@ -1,3 +1,5 @@
+'use client';
+
 import Button from '../components/ui/Button/Button';
 import StarIcon from '../components/StarIcon/StarIcon';
 import Image from 'next/image';
@@ -6,8 +8,18 @@ import TariffCard from '../components/ui/TariffCard/TariffCard';
 import AlertIcon from '../components/AlertIcon/AlertIcon';
 import Checkbox from '../components/ui/Checkbox/Checkbox';
 import Link from 'next/link';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { RequestGetAllTariff } from '../api/getAllTariffCard';
 
 export default function Home() {
+  const dataAllTariff = useSelector((state) => state.extraAllTariff.dataAllTariff);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(RequestGetAllTariff());
+  }, [dispatch]);
+
   return (
     <>
       <header className="w-[100%] h-[103px] bg-[#1D5B43] rounded-t-[60px] flex flex-col items-center justify-center max-[375px]:rounded-t-none max-[375px]:h-[85px] max-[320px]:rounded-t-none max-[320px]:h-[74px] max-[375px]:w-[375px] max-[320px]:w-[320px]">

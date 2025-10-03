@@ -1,5 +1,7 @@
-import { Geist, Geist_Mono, Montserrat, Raleway } from 'next/font/google';
 import './globals.css';
+
+import { Geist, Geist_Mono, Montserrat, Raleway } from 'next/font/google';
+import StoreProvider from '../providers/StoreProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -34,11 +36,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${montserrat.variable} ${geistSans.variable} ${geistMono.variable} ${raleway.variable} ${gilroy.variable}`}
-      >
-        {children}
-      </body>
+      <StoreProvider>
+        <body
+          className={`${montserrat.variable} ${geistSans.variable} ${geistMono.variable} ${raleway.variable} ${gilroy.variable}`}
+        >
+          {children}
+        </body>
+      </StoreProvider>
     </html>
   );
 }
