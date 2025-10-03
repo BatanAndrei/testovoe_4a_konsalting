@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { RequestGetAllTariff } from '../redux/thunks/getAllTariffCard';
 import RenderTariffCard from '../features/RenderTariffCard/RenderTariffCard';
+import Timer from '../features/Timer/Timer';
 
 export default function Home() {
   const dataAllTariff = useSelector(
@@ -30,9 +31,7 @@ export default function Home() {
         </span>
         <div className="w-[167px] h-[52px] flex items-center justify-between max-[375px]:w-[136px] max-[375px]:h-[42px] max-[320px]:w-[126px] max-[320px]:h-[36px]">
           <StarIcon />
-          <span className="font-raleway font-bold text-[40px] text-[#FFFFFF] max-[375px]:text-[32px] max-[320px]:text-[28px]">
-            02 : 00
-          </span>
+          <Timer />
           <StarIcon />
         </div>
       </header>
