@@ -5,7 +5,7 @@ export const RequestGetAllTariff = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        `https://t-core.fit-hub.pro/Test/GetTariffs`,
+        `/api/tariffs`,
         {
           method: 'GET',
         }

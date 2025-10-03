@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { RequestGetAllTariff } from '../redux/thunks/getAllTariffCard';
-import RenderTariffCard from '../Features/RenderTariffCard/RenderTariffCard';
+import RenderTariffCard from '../features/RenderTariffCard/RenderTariffCard';
 
 export default function Home() {
   const dataAllTariff = useSelector(
@@ -53,7 +53,7 @@ export default function Home() {
             max-[320px]:w-[99px] max-[320px]:h-[200px]"
             />
             <div className="w-[754px] h-[867px] max-[375px]:w-[359px] max-[320px]:w-[304px]">
-              <div className="flex flex-wrap-reverse gap-4 mt-[14px] w-[100%] h-[545px] max-[375px]:flex-nowrap max-[320px]:flex-nowrap max-[375px]:flex-col-reverse max-[320px]:flex-col-reverse max-[375px]:gap-2 max-[320px]:gap-2 max-[375px]:h-[545px] max-[320px]:h-[495px]">
+              <div className="flex flex-wrap gap-4 mt-[14px] w-[100%] h-[545px] max-[375px]:flex-nowrap max-[320px]:flex-nowrap max-[375px]:flex-col max-[320px]:flex-col max-[375px]:gap-2 max-[320px]:gap-2 max-[375px]:h-[545px] max-[320px]:h-[495px]">
                 <RenderTariffCard dataAllTariff={dataAllTariff} />
               </div>
               <div className="flex p-[12px_20px_15px_20px] bg-[#313637] mt-[20px] w-[499px] h-[78px] rounded-[20px] max-[375px]:mt-[10px] max-[320px]:mt-[10px] max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:h-[76px] max-[320px]:h-[76px] max-[375px]:p-[8px_40px_18px_15px] max-[320px]:p-[8px_20px_18px_15px]">
