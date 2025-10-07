@@ -29,8 +29,8 @@ const TariffRegular = ({
         <div className="mt-[15px] pr-[45px] flex justify-end w-[100%] h-[50px] text-[#FFFFFF] text-[50px] font-montserrat font-semibold max-[375px]:text-[34px] max-[320px]:text-[30px] max-[375px]:mt-[0px] max-[320px]:mt-[0px] max-[375px]:h-[34px] max-[320px]:h-[30px] max-[375px]:pr-[0px] max-[320px]:pr-[0px] max-[375px]:justify-start max-[320px]:justify-start">
           {discountHasDisappeared ? originalPrice : price}
         </div>
-        <div className="mt-[5px] pr-[40px] flex justify-end w-[100%][8px_10px_0_0] line-through text-[#919191] text-[24px] font-montserrat font-regular max-[375px]:text-[16px] max-[320px]:text-[14px] max-[375px]:pr-[0px] max-[320px]:pr-[0px] max-[375px]:m-[8px_15px_0_0] max-[320px]:m-[8px_15px_0_0] max-[375px]:w-[101px] max-[320px]:w-[90px]">
-          {!discountHasDisappeared && originalPrice}
+        <div className={`${discountHasDisappeared && 'opacity-0 translate-y-[-20px]'} transition-all duration-3000 ease-in-out mt-[5px] pr-[40px] flex justify-end w-[100%][8px_10px_0_0] line-through text-[#919191] text-[24px] font-montserrat font-regular max-[375px]:text-[16px] max-[320px]:text-[14px] max-[375px]:pr-[0px] max-[320px]:pr-[0px] max-[375px]:m-[8px_15px_0_0] max-[320px]:m-[8px_15px_0_0] max-[375px]:w-[101px] max-[320px]:w-[90px]`}>
+          {originalPrice}
         </div>
       </div>
       <div
