@@ -27,8 +27,8 @@ export default function Home() {
     dispatch(RequestGetAllTariff());
   }, [dispatch]);
 
-  const handleTariffClick = (index) => {
-    setSelectedTariff(index);
+  const handleTariffClick = (tariff) => {
+    setSelectedTariff(tariff);
   };
 
   const handleClickBuy = () => {
