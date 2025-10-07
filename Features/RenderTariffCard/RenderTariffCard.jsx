@@ -1,10 +1,15 @@
 import TariffCard from '../../components/ui/TariffCard/TariffCard';
+import { useSelector } from 'react-redux';
 
 const RenderTariffCard = ({
   dataAllTariff,
   handleTariffClick,
   selectedTarriff,
 }) => {
+  const discountHasDisappeared = useSelector(
+    (state) => state.setDiscountHasDisappeared.discountHasDisappeared
+  );
+
   return (
     <>
       {dataAllTariff?.map((item, index) => {
@@ -26,6 +31,7 @@ const RenderTariffCard = ({
             hit={item.is_best}
             onClick={() => handleTariffClick(index)}
             isSelected={selectedTarriff === index}
+            discountHasDisappeared={discountHasDisappeared}
           />
         );
       })}

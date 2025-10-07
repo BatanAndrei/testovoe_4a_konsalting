@@ -1,7 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { getColorTimerStars } from '../../redux/slices/tariffCardSlice';
+import {
+  getColorTimerStars,
+  setDiscountHasDisappeared,
+} from '../../redux/slices/tariffCardSlice';
 import { useDispatch } from 'react-redux';
 
 const Timer = () => {
@@ -33,6 +36,7 @@ const Timer = () => {
   useEffect(() => {
     let color = '#FFBB00';
     if (seconds === 0) {
+      dispatch(setDiscountHasDisappeared(true));
       color = '#FFFFFF';
     } else if (seconds <= 30) {
       color = '#FF4E4E';

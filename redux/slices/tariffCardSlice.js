@@ -6,6 +6,7 @@ const initialState = {
   status: 'idle',
   error: null,
   colorTimerStars: '#FFBB00',
+  discountHasDisappeared: false,
 };
 
 export const tariffCardSlice = createSlice({
@@ -14,6 +15,9 @@ export const tariffCardSlice = createSlice({
   reducers: {
     getColorTimerStars: (state, action) => {
       state.colorTimerStars = action.payload;
+    },
+    setDiscountHasDisappeared: (state, action) => {
+      state.discountHasDisappeared = action.payload;
     },
   },
 
@@ -33,5 +37,6 @@ export const tariffCardSlice = createSlice({
   },
 });
 
-export const { getColorTimerStars } = tariffCardSlice.actions;
+export const { getColorTimerStars, setDiscountHasDisappeared } =
+  tariffCardSlice.actions;
 export default tariffCardSlice.reducer;
