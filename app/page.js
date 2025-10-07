@@ -18,6 +18,7 @@ export default function Home() {
   const [isBlinking, setIsBlinking] = useState('');
   const [isCheckedCheckbox, setIsCheckedCheckbox] = useState(false);
   const [validationCheckbox, setValidationCheckbox] = useState(true);
+  const [validationTariff, setValidationTariff] = useState(false);
   const dataAllTariff = useSelector(
     (state) => state.extraAllTariff.dataAllTariff
   );
@@ -29,9 +30,11 @@ export default function Home() {
 
   const handleTariffClick = (tariff) => {
     setSelectedTariff(tariff);
+    setValidationTariff(false);
   };
 
   const handleClickBuy = () => {
+    if(!selectedTarriff) setValidationTariff(true);
     if (isCheckedCheckbox && selectedTarriff) {
       setIsBlinking('animate-pulse');
       setValidationCheckbox(true);
@@ -80,7 +83,7 @@ export default function Home() {
             max-[320px]:w-[99px] max-[320px]:h-[200px]"
             />
             <div className="w-[754px] h-[867px] max-[375px]:w-[359px] max-[320px]:w-[304px]">
-              <div className="flex flex-wrap gap-4 mt-[14px] w-[100%] h-[545px] max-[375px]:flex-nowrap max-[320px]:flex-nowrap max-[375px]:flex-col max-[320px]:flex-col max-[375px]:gap-2 max-[320px]:gap-2 max-[375px]:h-[545px] max-[320px]:h-[495px]">
+              <div className={`flex flex-wrap gap-4 mt-[14px] w-[100%] h-[545px] max-[375px]:flex-nowrap max-[320px]:flex-nowrap max-[375px]:flex-col max-[320px]:flex-col max-[375px]:gap-2 max-[320px]:gap-2 max-[375px]:h-[545px] max-[320px]:h-[495px] ${validationTariff && 'animate-pulse'}`}>
                 <RenderTariffCard
                   handleTariffClick={handleTariffClick}
                   selectedTarriff={selectedTarriff}
