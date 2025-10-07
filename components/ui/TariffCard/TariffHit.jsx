@@ -38,10 +38,14 @@ const TariffHit = ({
         <div className="flex justify-center text-[#FFFFFF] text-[26px] font-montserrat font-medium max-[375px]:text-[18px] max-[320px]:text-[16px] max-[375px]:justify-start max-[320px]:justify-start">
           {title}
         </div>
-        <div className={`flex justify-center w-[178px] h-[50px] text-[#FDB056] text-[50px] font-montserrat font-semibold max-[375px]:text-[34px] max-[320px]:text-[30px] max-[375px]:justify-start max-[320px]:justify-start max-[375px]:w-[121px] max-[320px]:w-[107px] max-[375px]:h-[34px] max-[320px]:h-[30px]`}>
+        <div
+          className={`flex justify-center w-[178px] h-[50px] text-[#FDB056] text-[50px] font-montserrat font-semibold max-[375px]:text-[34px] max-[320px]:text-[30px] max-[375px]:justify-start max-[320px]:justify-start max-[375px]:w-[121px] max-[320px]:w-[107px] max-[375px]:h-[34px] max-[320px]:h-[30px]`}
+        >
           {discountHasDisappeared ? originalPrice : price}
         </div>
-        <div className={`${discountHasDisappeared && 'opacity-0 translate-y-[-20px]'} transition-all duration-3000 ease-in-out flex justify-end m-[8px_10px_0_0] line-through text-[#919191] text-[24px] font-montserrat font-regular max-[375px]:text-[16px] max-[320px]:text-[14px] max-[375px]:m-[8px_15px_0_0] max-[320px]:m-[8px_15px_0_0]`}>
+        <div
+          className={`${discountHasDisappeared && 'opacity-0 translate-y-[-20px]'} transition-all duration-3000 ease-in-out flex justify-end m-[8px_10px_0_0] line-through text-[#919191] text-[24px] font-montserrat font-regular max-[375px]:text-[16px] max-[320px]:text-[14px] max-[375px]:m-[8px_15px_0_0] max-[320px]:m-[8px_15px_0_0]`}
+        >
           {originalPrice}
         </div>
       </div>
