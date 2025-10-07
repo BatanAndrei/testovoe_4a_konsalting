@@ -5,12 +5,17 @@ const initialState = {
   dataAllTariff: [],
   status: 'idle',
   error: null,
+  colorTimerStars: '#FFBB00',
 };
 
 export const tariffCardSlice = createSlice({
   name: 'tariffCard',
   initialState,
-  reducers: {},
+  reducers: {
+    getColorTimerStars: (state, action) => {
+      state.colorTimerStars = action.payload;
+    },
+  },
 
   extraReducers: (builder) => {
     builder.addCase(RequestGetAllTariff.pending, (state) => {
@@ -28,5 +33,5 @@ export const tariffCardSlice = createSlice({
   },
 });
 
-export const { allTariff } = tariffCardSlice.actions;
+export const { getColorTimerStars } = tariffCardSlice.actions;
 export default tariffCardSlice.reducer;

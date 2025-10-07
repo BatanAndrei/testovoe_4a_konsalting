@@ -5,6 +5,7 @@ export const makeStore = () => {
   return configureStore({
     reducer: {
       extraAllTariff: tariffCardSlice,
+      getColorTimerStars: tariffCardSlice,
     },
   });
 };
