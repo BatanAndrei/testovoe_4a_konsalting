@@ -2,6 +2,10 @@
   cursor: pointer;
 }
 
+.label.error .fake {
+  border: 1px solid red;
+}
+
 .checkbox {
   display: none;
 }
@@ -15,6 +19,7 @@
   font-size: 28px;
   border: 1px solid #606566;
   justify-content: center;
+  transition: border-color 0.2s;
 }
 
 .fake::before {

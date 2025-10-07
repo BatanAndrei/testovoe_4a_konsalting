@@ -15,6 +15,9 @@ import Timer from '../features/Timer/Timer';
 
 export default function Home() {
   const [selectedTarriff, setSelectedTariff] = useState(null);
+  const [isBlinking, setIsBlinking] = useState('');
+  const [isCheckedCheckbox, setIsCheckedCheckbox] = useState(false);
+  const [validationCheckbox, setValidationCheckbox] = useState(true);
   const dataAllTariff = useSelector(
     (state) => state.extraAllTariff.dataAllTariff
   );
@@ -26,6 +29,26 @@ export default function Home() {
 
   const handleTariffClick = (index) => {
     setSelectedTariff(index);
+  };
+
+  const handleClickBuy = () => {
+    if (isCheckedCheckbox && selectedTarriff) {
+      setIsBlinking('animate-pulse');
+      setValidationCheckbox(true);
+    } else if (!isCheckedCheckbox) {
+      setValidationCheckbox(false);
+    }
+  };
+
+  const handleChangeChecked = (e) => {
+    const checkedValue = e.target.checked;
+    setIsCheckedCheckbox(checkedValue);
+    if (checkedValue) {
+      setValidationCheckbox(true);
+    }
+    if (!checkedValue) {
+      setIsBlinking('');
+    }
   };
 
   return (
@@ -72,7 +95,10 @@ export default function Home() {
                 </span>
               </div>
               <div className="flex items-center mt-[30px] w-[649px] h-[36px] max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:mt-[10px] max-[320px]:mt-[10px]">
-                <Checkbox />
+                <Checkbox
+                  validationCheckbox={validationCheckbox}
+                  handleChange={handleChangeChecked}
+                />
                 <div className="m-[5px_0_0_15px] text-[#CDCDCD] text-[16px] font-montserrat font-regular leading-none max-[375px]:text-[12px] max-[320px]:text-[12px]">
                   Я согласен с{' '}
                   <Link href="#">
@@ -89,8 +115,9 @@ export default function Home() {
                 </div>
               </div>
               <Button
+                handleClick={handleClickBuy}
                 title="Купить"
-                className="mt-[16px] cursor-pointer w-[352px] h-[66px] rounded-[20px] bg-[#FDB056] text-[20px] font-montserrat font-bold max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:h-[63px] max-[320px]:h-[55px]"
+                className={`mt-[16px] cursor-pointer w-[352px] h-[66px] rounded-[20px] bg-[#FDB056] text-[20px] font-montserrat font-bold max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:h-[63px] max-[320px]:h-[55px] ${isBlinking}`}
               />
               <div className="mt-[14px] text-[#9B9B9B] text-[14px] w-[748px] h-[68px] font-montserrat font-regular max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:h-[72px] max-[320px]:h-[84px] max-[375px]:text-[10px] max-[320px]:text-[10px]">
                 Нажимая кнопку «Купить», Пользователь соглашается на разовое
