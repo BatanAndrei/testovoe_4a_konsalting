@@ -5,16 +5,16 @@ import {
   getColorTimerStars,
   setDiscountHasDisappeared,
 } from '../../redux/slices/tariffCardSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Timer = () => {
   const dispatch = useDispatch();
-
+  const status = useSelector((state) => state.extraAllTariff.status);
   const [seconds, setSeconds] = useState(120);
   const [isBlinking, setIsBlinking] = useState(false);
 
   useEffect(() => {
-    if (seconds > 0) {
+    if (seconds > 0 && status !== 'loading') {
       const interval = setInterval(() => {
         setSeconds((s) => s - 1);
       }, 1000);

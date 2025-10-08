@@ -13,11 +13,11 @@ export const tariffCardSlice = createSlice({
   name: 'tariffCard',
   initialState,
   reducers: {
-    getColorTimerStars: (state, action) => {
-      state.colorTimerStars = action.payload;
+    getColorTimerStars: (state, { payload }) => {
+      state.colorTimerStars = payload;
     },
-    setDiscountHasDisappeared: (state, action) => {
-      state.discountHasDisappeared = action.payload;
+    setDiscountHasDisappeared: (state, { payload }) => {
+      state.discountHasDisappeared = payload;
     },
   },
 
@@ -28,11 +28,15 @@ export const tariffCardSlice = createSlice({
     });
     builder.addCase(RequestGetAllTariff.fulfilled, (state, { payload }) => {
       state.dataAllTariff = payload;
-      state.status = 'idle';
+      state.status = 'succeeded';
     });
     builder.addCase(RequestGetAllTariff.rejected, (state, { payload }) => {
-      if (payload) state.error = payload.message;
-      state.status = 'idle';
+      if (payload) {
+        state.error = payload.message;
+      } else {
+        state.error = error.message;
+      }
+      state.status = 'failed';
     });
   },
 });
