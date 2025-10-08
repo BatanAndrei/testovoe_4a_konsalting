@@ -13,6 +13,11 @@ const Timer = () => {
   const status = useSelector((state) => state.extraAllTariff.status);
   const [seconds, setSeconds] = useState(120);
   const [isBlinking, setIsBlinking] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     if (seconds > 0 && status !== 'loading') {
@@ -21,7 +26,7 @@ const Timer = () => {
       }, 1000);
       return () => clearInterval(interval);
     }
-  }, [seconds]);
+  }, [seconds, isClient, status]);
 
   useEffect(() => {
     if (seconds <= 30 && seconds > 0) {
