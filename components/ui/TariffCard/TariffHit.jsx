@@ -1,0 +1,74 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
+const TariffHit = ({
+  title,
+  price,
+  percent,
+  description,
+  originalPrice,
+  onClick,
+  isSelected,
+  discountHasDisappeared,
+}) => {
+  const [shortDescription, setShortDescription] = useState();
+
+  useEffect(() => {
+    const shortText = description.replace(
+      'Для тех, кто хочет всегда быть в форме и поддерживать здоровье',
+      'Всегда быть в форме'
+    );
+    setShortDescription(shortText);
+  }, []);
+
+  return (
+    <div
+      onClick={onClick}
+      className={`bg-[#313637] p-[0_20px_0_50px] w-[100%] h-[190px] border-2 ${isSelected ? 'border-[#FDB056]' : 'border-[#484D4E]'} rounded-[40px] flex justify-between max-[375px]:h-[131px] max-[320px]:h-[118px] max-[375px]:p-[0_11px_0_30px]  max-[320px]:p-[0_11px_0_21px] max-[375px]:rounded-[20px] max-[320px]:rounded-[20px]`}
+    >
+      {!discountHasDisappeared && (
+        <div className="w-[66px] h-[39px] rounded-b-[8px] bg-[#FD5656] flex items-center justify-center max-[375px]:hidden max-[320px]:hidden">
+          <span className="text-[22px] text-[#FFFFFF] font-gilroy">
+            {percent}
+          </span>
+        </div>
+      )}
+      <div className="mt-[24px] w-[178px] h-[126px] max-[375px]:w-[121px] max-[320px]:w-[107px] max-[375px]:h-[91px] max-[320px]:h-[78px] max-[375px]:mt-[20px] max-[320px]:mt-[20px]">
+        <div className="flex justify-center text-[#FFFFFF] text-[26px] font-montserrat font-medium max-[375px]:text-[18px] max-[320px]:text-[16px] max-[375px]:justify-start max-[320px]:justify-start">
+          {title}
+        </div>
+        <div
+          className={`flex justify-center w-[178px] h-[50px] text-[#FDB056] text-[50px] font-montserrat font-semibold max-[375px]:text-[34px] max-[320px]:text-[30px] max-[375px]:justify-start max-[320px]:justify-start max-[375px]:w-[121px] max-[320px]:w-[107px] max-[375px]:h-[34px] max-[320px]:h-[30px]`}
+        >
+          {discountHasDisappeared ? originalPrice : price}
+        </div>
+        <div
+          className={`${discountHasDisappeared && 'opacity-0 translate-y-[-20px]'} transition-all duration-3000 ease-in-out flex justify-end m-[8px_10px_0_0] line-through text-[#919191] text-[24px] font-montserrat font-regular max-[375px]:text-[16px] max-[320px]:text-[14px] max-[375px]:m-[8px_15px_0_0] max-[320px]:m-[8px_15px_0_0]`}
+        >
+          {originalPrice}
+        </div>
+      </div>
+      <div className="hidden md:block pl-[30px] mt-[66px] flex items-center w-[328px] h-[62px] text-[16px] text-[#FFFFFF] font-montserrat font-regular max-[375px]:leading-none max-[320px]:leading-none">
+        {description}
+      </div>
+      <div
+        className={`block md:hidden pb-[20px] flex items-center text-[16px] text-[#FFFFFF] font-montserrat font-regular max-[375px]:w-[120px] max-[320px]:w-[120px] max-[375px]:text-[14px] max-[320px]:text-[14px] max-[375px]:pl-[20px] max-[320px]:pl-[40px] max-[375px]:flex max-[320px]:flex max-[375px]:flex-col max-[320px]:flex-col max-[375px]:leading-none max-[320px]:leading-none max-[375px]:flex-start max-[320px]:flex-start ${discountHasDisappeared ? 'max-[375px]:mt-[50px] max-[320px]:mt-[50px]' : 'max-[375px]:mt-[0px] max-[320px]:mt-[0px]'}`}
+      >
+        {!discountHasDisappeared && (
+          <div className="block md:hidden w-[66px] h-[39px] rounded-b-[8px] bg-[#FD5656] flex items-center justify-center max-[375px]:w-[48px] max-[375px]:h-[27px] max-[320px]:w-[42px] max-[320px]:h-[23px] max-[375px]:m-[0_0_20px_70px] max-[320px]:m-[0_0_20px_40px]">
+            <span className="text-[22px] text-[#FFFFFF] font-gilroy max-[375px]:text-[16px] max-[320px]:text-[13px]">
+              {percent}
+            </span>
+          </div>
+        )}
+        {shortDescription}
+      </div>
+      <div className="mt-[10px] text-[#FDB056] text-[22px] font-montserrat font-medium max-[375px]:mt-[0px] max-[320px]:mt-[0px] max-[375px]:text-[16px] max-[320px]:text-[13px]">
+        хит!
+      </div>
+    </div>
+  );
+};
+
+export default TariffHit;
