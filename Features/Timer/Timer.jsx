@@ -15,7 +15,7 @@ const Timer = () => {
   const [isBlinking, setIsBlinking] = useState(false);
 
   useEffect(() => {
-    if (seconds > 0 && status === 'succeeded') {
+    if (seconds > 0 && status !== 'loading') {
       const interval = setInterval(() => {
         setSeconds((s) => s - 1);
       }, 1000);
