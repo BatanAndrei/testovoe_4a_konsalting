@@ -9,8 +9,8 @@ import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { RequestGetAllTariff } from '../redux/thunks/getAllTariffCard';
-import RenderTariffCard from '../features/RenderTariffCard/RenderTariffCard';
-import Timer from '../features/Timer/Timer';
+import RenderTariffCard from '../Features/RenderTariffCard/RenderTariffCard';
+import Timer from '../Features/Timer/Timer';
 
 export default function Home() {
   const [selectedTarriff, setSelectedTariff] = useState(null);
