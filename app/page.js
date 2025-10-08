@@ -5,7 +5,7 @@ import StarIcon from '../components/Icons/StarIcon/StarIcon';
 import Image from 'next/image';
 import imgDesck from '../public/imgDesck.png';
 import AlertIcon from '../components/Icons/AlertIcon/AlertIcon';
-import Checkbox from '../components/ui/Checkbox/Checkbox';
+import CustomCheckbox from '../components/ui/CustomCheckbox/CustomCheckbox';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
@@ -100,7 +100,7 @@ export default function Home() {
                 </span>
               </div>
               <div className="flex items-center mt-[30px] w-[649px] h-[36px] max-[375px]:w-[100%] max-[320px]:w-[100%] max-[375px]:mt-[10px] max-[320px]:mt-[10px]">
-                <Checkbox
+                <CustomCheckbox
                   validationCheckbox={validationCheckbox}
                   handleChange={handleChangeChecked}
                 />
