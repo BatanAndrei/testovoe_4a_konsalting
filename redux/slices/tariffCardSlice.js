@@ -27,16 +27,12 @@ export const tariffCardSlice = createSlice({
       state.error = null;
     });
     builder.addCase(RequestGetAllTariff.fulfilled, (state, { payload }) => {
-      state.dataAllTariff = payload;
       state.status = 'succeeded';
+      state.dataAllTariff = payload;
     });
     builder.addCase(RequestGetAllTariff.rejected, (state, { payload }) => {
-      if (payload) {
-        state.error = payload.message;
-      } else {
-        state.error = error.message;
-      }
       state.status = 'failed';
+      state.error = payload?.message || error.message;
     });
   },
 });
