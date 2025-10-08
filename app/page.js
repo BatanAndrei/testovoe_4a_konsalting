@@ -1,7 +1,6 @@
 'use client';
 
 import Button from '../components/ui/Button/Button';
-import StarIcon from '../components/Icons/StarIcon/StarIcon';
 import Image from 'next/image';
 import imgDesck from '../public/imgDesck.png';
 import AlertIcon from '../components/Icons/AlertIcon/AlertIcon';
@@ -61,9 +60,7 @@ export default function Home() {
           Успейте открыть пробную неделю
         </span>
         <div className="w-[167px] h-[52px] flex items-center justify-between max-[375px]:w-[136px] max-[375px]:h-[42px] max-[320px]:w-[126px] max-[320px]:h-[36px]">
-          <StarIcon />
           <Timer />
-          <StarIcon />
         </div>
       </header>
       <main className="w-[100%] h-[1518px] bg-[#232829] rounded-b-[60px] flex justify-center max-[375px]:rounded-b-none max-[320px]:rounded-b-none max-[375px]:w-[375px] max-[320px]:w-[320px] max-[375px]:p-[0_16px_0_16px] max-[320px]:p-[0_16px_0_16px]">

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import StarIcon from '../../components/Icons/StarIcon/StarIcon';
 import {
   getColorTimerStars,
   setDiscountHasDisappeared,
@@ -59,14 +60,18 @@ const Timer = () => {
     const blinkClass =
       seconds <= 30 && seconds > 0 && isBlinking ? 'opacity-0' : 'opacity-100';
 
-    return `font-raleway font-bold text-[40px] max-[375px]:text-[32px] max-[320px]:text-[28px] ${colorClasses} ${blinkClass} transition-opacity duration-100`;
+    return `font-raleway font-bold text-[40px] max-[375px]:text-[32px] max-[320px]:text-[28px] max-[375px]:w-[100px] max-[320px]:w-[100px]  ${colorClasses} ${blinkClass} transition-opacity duration-100`;
   };
 
   return (
-    <span className={getTimerClasses()}>
-      {minutes.toString().padStart(2, '0')} :{' '}
-      {remainingSeconds.toString().padStart(2, '0')}
-    </span>
+    <div className="flex items-center gap-x-[8px]">
+      <StarIcon />
+      <span className={getTimerClasses()}>
+        {minutes.toString().padStart(2, '0')} :{' '}
+        {remainingSeconds.toString().padStart(2, '0')}
+      </span>
+      <StarIcon />
+    </div>
   );
 };
 
