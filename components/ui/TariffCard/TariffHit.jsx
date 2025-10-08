@@ -39,7 +39,7 @@ const TariffHit = ({
           {title}
         </div>
         <div
-          className={`flex justify-center w-[178px] h-[50px] text-[#FDB056] text-[50px] font-montserrat font-semibold max-[375px]:text-[34px] max-[320px]:text-[30px] max-[375px]:justify-start max-[320px]:justify-start max-[375px]:w-[121px] max-[320px]:w-[120px] max-[375px]:h-[34px] max-[320px]:h-[30px]`}
+          className={`flex justify-center w-[178px] h-[50px] text-[#FDB056] text-[50px] font-montserrat font-semibold max-[375px]:text-[34px] max-[320px]:text-[30px] max-[375px]:justify-start max-[320px]:justify-start max-[375px]:w-[121px] max-[320px]:w-[107px] max-[375px]:h-[34px] max-[320px]:h-[30px]`}
         >
           {discountHasDisappeared ? originalPrice : price}
         </div>
